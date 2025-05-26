@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Fuentes de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
+        rel="stylesheet">
+    
+    <!-- Iconos de Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--Mis estilos-->
+    <link rel="stylesheet" href="styles.css">
+    <title>Mi proyecto final</title>    
+</head>
+
+<body>
+    <header>        
+        <div id="logoYNav">
+            <img 
+                src="imagenes/logoprinc2.jpg" 
+                alt="Logo suculentas">
+            <!--<img src="logo.jpeg" alt="Foto de varias echeverias"> -->
+            <nav id="headerNav">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+            
+        <div 
+        class="banner">
+            <h2>Bienvenidos </h2>
+        </div>
+        
+        <div class="contenedorImg">
+        <img id="imgPrin"
+            src="imagenes/logo.jpeg" 
+            alt="Imagen de persona sosteniendo maceta con plantas">
+        </div>            
+        
+        <!-- Video de youtube-->
+        <iframe 
+            width="640" 
+            height="360" 
+            src="https://www.youtube.com/embed/4wxS1q279vY" 
+            title="EXOTIC SUCCULENTS | Unusual and Rare Succulent Plants | Plant and Planting" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+
+        >
+        </iframe>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Productos</h2>
+            <div id="contenedorProductos">
+                <div>
+                    <img src="/imagenes/Agave_schindigera_compacta_810.jpg" alt="Foto de Agave_schindigera_compacta">
+                    <h3>Agave schidigera compacta</h3>
+                    <p>$7.800</p>
+                </div>
+                <div>
+                    <img src="/imagenes/albuca-spiralis.webp" alt="Foto de albucaspiralis">
+                    <h3>Albuca spiralis</h3>
+                    <p>$11.800</p>
+                </div>
+                <div>
+                    <img src="/imagenes/ECHCAN-2.webp" alt="Foto de Echeveria-cante">
+                    <h3>Echeveria cante</h3>
+                    <p>$15.800</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="textoVerde">Contacto</h2>
+        <form action="https://formspree.io/f/mblovyly" method="POST">
+            <div>            
+                <label class="textoVerde"> 
+                    Tu mail:
+                    <input type="email" name="email" required>
+                </label>
+            </div>
+            <div>
+                <label class="textoVerde">
+                    Tu mensaje:
+                    <textarea name="message"></textarea>
+                </label>
+            </div>
+        <!-- your other form fields go here -->
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- nombre apellido direccion email telefono 
+        <form action="" method="">        
+            <div>  
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" required>
+            </div>
+                <label for="">Apellido</label>
+                <input type="text" name="apellido"required>
+            <div>
+                <label for="">Dirección</label>
+                <input type="text" name="direccion">
+            <div>
+                <label for="">Email</label>
+                <input type="text" name="email"required>
+            <div>
+                <label for="">Telefono</label>
+                <input type="text" name="telefono"required>          
+            </div>
+
+        </form> -->  
+        
+        <!-- Google map-->
+        <h2 id="h2Visitanos" class="textoVerde">Visitanos</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26281.488310833938!2d-58.41486299450681!3d-34.57415892125036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1748148031646!5m2!1ses!2sar" 
+            width="400" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+
+    </main>
+
+    <footer>
+        <h3 class="textoVerde">Datos</h3>
+        <nav id="footerNav">    
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <h2>Seguinos en nuestras redes</h2>
+        <ul>
+            <li><i class="fa-brands fa-square-instagram"></i> Instagram</li>
+            <li><i class="fa-brands fa-tiktok"></i> Tiktok</li>
+            <li><i class="fa-brands fa-square-facebook"></i> Facebook</li>
+        </ul>
+
+    </footer>
+    <!-- copiar codigo de inserción para videos <a href="https://www.youtube.com/watch?v=4wxS1q279vY" target="_blank">Suculentas exóticas</a>
+    <a href="https://www.youtube.com/watch?v=iWCQE6m0HXo"></a>
+    <a href="https://www.youtube.com/watch?v=8PcctuXKABA"></a>
+    <a href="https://www.youtube.com/watch?v=ebCGVOlnM4Q"></a>
+    https://www.youtube.com/@joygardenstudio/videos-->
+</body>
+</html>
