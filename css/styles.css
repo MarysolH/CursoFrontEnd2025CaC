@@ -5,6 +5,7 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0%;
   overflow-x: hidden;
+  background-color: #dcf19ec8;
 }
 
 /* ----------------------------- */
@@ -127,7 +128,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 129px 0 8rem 0;
+  margin: 129px 0 4rem 0;
 }
 
 #imgPrin {
@@ -169,7 +170,7 @@ header a {
   font-size: 3rem;
   margin-bottom: 1rem;
   transform: skew(-10deg);
-  background-color: #3b8032ce;
+  background-color: #3b8032ce;  
   padding: 0.5rem 1rem;
 }
 
@@ -190,10 +191,11 @@ header a {
   .textoSobreImg .linea2 {
     font-size: 1.5rem;
     line-height: 1.3;
+    
   }
 
   .logoSobreImg {
-    margin-top: 0.6rem;
+    margin-top: 18.6rem;
   }
 }
 header img {
@@ -1110,4 +1112,270 @@ html {
   align-items: center;
   justify-content: center;
   filter: grayscale(100%); /* estilo uniforme en blanco y negro */
+}
+
+/* ----------------------------- */
+/* Menú Hamburguesa */
+/* ----------------------------- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #535353;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  #topBar {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  #logoYNav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+  }
+
+  .zona-logo {
+    justify-content: flex-start;
+  }
+
+  .zona-carrito {
+    width: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #headerNav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  #headerNav.active {
+    display: flex;
+  }
+
+  #headerNav ul.menu {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  #headerNav ul.menu li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+/* MENÚ NORMAL (pantalla grande) */
+#headerNav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Menú hamburguesa (oculto por defecto en escritorio) */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #535353;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.zona-derecha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+
+
+/* --------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  /* Oculta el menú de navegación */
+  #headerNav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  #headerNav.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Muestra el botón hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Por defecto (pantallas grandes): ocultar hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+/* Mostrar hamburguesa SOLO en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* o block */
+  }
+}
+
+@media (max-width: 768px) {
+  #logoYNav {
+    padding: 4px 12px;  /* Menos padding = menos alto */
+    gap: 0.5rem;         /* Menor espacio entre elementos */
+  }
+
+  #logoPrincipal {
+    height: 50px;        /* Opcional: logo más chico en móviles */
+  }
+}
+
+/* Estilos solo para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Sidebar oculto por defecto */
+  #headerNav.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    background-color: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+    padding-top: 5rem;
+  }
+
+  /* Mostrar sidebar cuando tiene clase "active" */
+  #headerNav.menu-lateral.active {
+    right: 0;
+  }
+
+  #headerNav ul.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding-left: 2rem;
+  }
+
+  #headerNav ul.menu li a {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+/* Estilo menú lateral */
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 80%;
+  padding: 3rem 2rem;
+  z-index: 1001;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.2);
+}
+
+.menu-lateral.active {
+  left: 0;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  margin-bottom: 1.5rem;
+}
+
+.menu-lateral li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Overlay oscuro */
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-escritorio {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-lateral {
+    display: flex;
+  }
 }

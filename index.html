@@ -36,25 +36,48 @@
                         id="logoPrincipal">
                 </a>
             </div>
-            <!--<img src="logo.jpeg" alt="Foto de varias echeverias"> -->
-            <nav id="headerNav">
-                <ul class="menu">
-                    
+                       
+            <!-- Menú de navegación  -->
+            <nav id="headerNav" class="nav-escritorio">
+                <ul class="menu">                    
                     <li><a href="#inicio">INICIO</a></li>
                     <li><a href="#nosotros">NOSOTROS</a></li>
                     <li><a href="#servicios">SERVICIOS</a></li>
                     <li><a href="#productos">PRODUCTOS</a></li>
                     <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
-            </nav>            
-            <div class="zona-carrito">
-                <a href="#" id="iconoCarrito">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="contadorCarrito">0</span>
-                </a>           
-            </div> 
+            </nav> 
+
+            <div class="zona-derecha">
+            <!-- Carrito -->           
+                <div class="zona-carrito">
+                    <a href="#" id="iconoCarrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="contadorCarrito">0</span>
+                    </a>           
+                </div>
                 
-        </div>         
+                <!-- Botón hamburguesa -->
+                <button id="btnMenu" class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i><span class="texto-menu">MENU</span>
+                </button>
+                
+            </div>
+        </div>                             
+        
+        <!-- Menú lateral hamburguesa (móvil) -->
+        <nav id="menuHamburguesa" class="menu-lateral">
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#servicios">SERVICIOS</a></li>
+                <li><a href="#productos">PRODUCTOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <!-- Fondo oscuro -->
+        <div id="menuOverlay" class="overlay"></div>
         
         <div class="contenedorImg">
             <img id="imgPrin"

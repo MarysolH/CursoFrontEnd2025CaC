@@ -265,8 +265,26 @@ document.getElementById("verMasProductos").addEventListener("click", function (e
 });
 
 
+const btnMenu = document.getElementById('btnMenu');
+const menuLateral = document.getElementById('menuHamburguesa');
+const overlay = document.getElementById('menuOverlay');
 
+btnMenu.addEventListener('click', () => {
+  menuLateral.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
 
+overlay.addEventListener('click', () => {
+  menuLateral.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+menuLateral.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuLateral.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+});
 
 
 
