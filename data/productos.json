@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Agave schidigera compacta",
+    "precio": 7800,
+    "imagen": "imagenes/Agave_schindigera_compacta_810.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Albuca spiralis",
+    "precio": 11800,
+    "imagen": "imagenes/albuca-spiralis.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Echeveria cante",
+    "precio": 25800,
+    "imagen": "imagenes/ECHCAN-2.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Echeveria purpusorum white",
+    "precio": 15100,
+    "imagen": "imagenes/Echeveria_purpusorum_White_Form.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "E. Agavoide Romeo Rubin",
+    "precio": 12500,
+    "imagen": "imagenes/agavoide_romeorubin.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Haworthia glauca",
+    "precio": 16900,
+    "imagen": "imagenes/haworthia_glauca_var_1__81467.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Crasula ovata gollum",
+    "precio": 9800,
+    "imagen": "imagenes/crassula-ovata-hobbit-in-pot.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Crasula rupestri",
+    "precio": 9500,
+    "imagen": "imagenes/Crassula-Rupestris-Marnieriana-55-2024-scaled.webp"
+  },
+  {
+    "id": 9,
+    "nombre": "Sansevieria sweet celery",
+    "precio": 27800,
+    "imagen": "imagenes/sansesweet1.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Sempervivum calcareum",
+    "precio": 8500,
+    "imagen": "imagenes/Sempervivum-Calcareum.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Aeonium arboreum",
+    "precio": 15800,
+    "imagen": "imagenes/aeonium-arboreum-velour2.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Echeveria agavoide Ebony",
+    "precio": 10500,
+    "imagen": "imagenes/Echeveriagavoides_Ebony_2.webp"
+  }
+]

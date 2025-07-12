@@ -7,161 +7,388 @@
     <!--Fuentes de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     
     <!-- Iconos de Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!--Mis estilos-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Mi proyecto final</title>    
 </head>
 
+
+
 <body>
-    <header>        
-        <div id="logoYNav">
-            <img 
-                src="imagenes/logoprinc2.jpg" 
-                alt="Logo suculentas">
+    <!-- ======================== TOP BAR ======================== -->
+    <div id="topBar">
+        <p>Descubrí tu próxima planta. <a href="#productos">Hace click ACÁ</a></p>
+    </div>
+
+    <!-- ======================== HEADER ======================== -->
+    <header id="inicio">        
+        <div id="logoYNav" class="logoYNav">
+            <div class="zona-logo">
+                <a href="#inicio">
+                    <img 
+                        src="imagenes/logoMar.jpg" 
+                        alt="Logo planta Vivero Mar"
+                        id="logoPrincipal">
+                </a>
+            </div>
             <!--<img src="logo.jpeg" alt="Foto de varias echeverias"> -->
             <nav id="headerNav">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
+                <ul class="menu">
+                    
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#servicios">SERVICIOS</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
-            </nav>
-        </div>
-            
-        <div 
-        class="banner">
-            <h2>Bienvenidos </h2>
-        </div>
+            </nav>            
+            <div class="zona-carrito">
+                <a href="#" id="iconoCarrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contadorCarrito">0</span>
+                </a>           
+            </div> 
+                
+        </div>         
         
         <div class="contenedorImg">
-        <img id="imgPrin"
-            src="imagenes/logo.jpeg" 
-            alt="Imagen de persona sosteniendo maceta con plantas">
+            <img id="imgPrin"
+                src="imagenes/logo.jpeg" 
+                alt="Imagen de persona sosteniendo maceta con plantas">
+            <div class="textoSobreImg">
+                <p class="linea1">CADA PLANTA ES UNICA</p>
+                <p class="linea2">y te está esperando</p>
+                <img src="imagenes/logoMar2.jpg" alt="Logo Vivero Mar" class="logoSobreImg">
+            </div>
         </div>            
-        
-        <!-- Video de youtube-->
-        <iframe 
-            width="640" 
-            height="360" 
-            src="https://www.youtube.com/embed/4wxS1q279vY" 
-            title="EXOTIC SUCCULENTS | Unusual and Rare Succulent Plants | Plant and Planting" 
+    </header>
+
+    <!-- ======================== MAIN ================================ -->
+    <main>
+         
+        <!-- ========== SECCIÓN NOSOTROS ========== -->
+        <section id="nosotros" class="seccionNosotros">
+            <div class="nosotrosTexto">
+                <h2>Sobre Nosotros</h2>
+                <h3>TRADICION Y PASION POR LAS PLANTAS DESDE 2010</h3>
+                <p>
+                Somos un vivero dedicado al cultivo y venta de plantas suculentas exóticas.
+                Nuestro objetivo es conectar a las personas con la naturaleza, ofreciendo
+                variedades únicas y asesoramiento personalizado.
+                </p>
+                <p>
+                Trabajamos con amor por las plantas y creemos en el poder de lo simple y natural.
+                </p>
+            </div>
+
+            <div class="nosotrosImagen">
+                <img src="imagenes/vivero.avif" alt="Equipo del vivero trabajando">
+            </div>
+        </section>
+
+            
+        <!-- ======================== VIDEO PRESENTACIÓN ======================== -->
+        <div class="videoResponsive">
+            <h2>Nuestras Plantas</h2>
+            <iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Lxmlw6r2SRQ?si=MzjgmK0FIBLZr6Tu" 
+            title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen
-
-        >
-        </iframe>
-    </header>
+            >
+            </iframe>
+            
+        </div>      
     
-    <main>
-        <section>
-            <h2>Productos</h2>
-            <div id="contenedorProductos">
-                <div>
-                    <img src="imagenes/Agave_schindigera_compacta_810.jpg" alt="Foto de Agave_schindigera_compacta">
-                    <h3>Agave schidigera compacta</h3>
-                    <p>$7.800</p>
+                   
+        <!-- =================== SECCIÓN SERVICIOS ====================== -->
+        
+        <section id="servicios" class="seccionServicios">
+            <h2>Servicios</h2>
+            <p>Ofrecemos soluciones personalizadas para transformar tus espacios con naturaleza.</p>
+
+            <div class="contenedor-servicios">
+                <div class="servicio-card">
+                    <img src="imagenes/paisajismo.jpg" alt="Diseño de paisajes">
+                    <h3>Diseño de paisajes</h3>
+                    <p>Nuestros diseños agregan belleza, color y textura a tus áreas exteriores y espacios interiores, creando un ambiente visualmente atractivo y armonioso.</p>
                 </div>
-                <div>
-                    <img src="imagenes/albuca-spiralis.webp" alt="Foto de albucaspiralis">
-                    <h3>Albuca spiralis</h3>
-                    <p>$11.800</p>
+
+                <div class="servicio-card">
+                    <img src="imagenes/ideas-de-techo-de-plantas-3.jpg" alt="Terrazas verdes">
+                    <h3>Terrazas verdes</h3>
+                    <p>Transformamos las terrazas en oasis urbanos, llenos de vida y color, creando ambientes relajantes y acogedores.</p>
                 </div>
-                <div>
-                    <img src="imagenes/ECHCAN-2.webp" alt="Foto de Echeveria-cante">
-                    <h3>Echeveria cante</h3>
-                    <p>$15.800</p>
+
+                <div class="servicio-card">
+                    <img src="imagenes/jardin-vertical-mural-exterior.jpg" alt="Jardines verticales">
+                    <h3>Jardines verticales</h3>
+                    <p>Los jardines verticales son una obra de arte viva que agregan un toque de elegancia y frescura a cualquier entorno.</p>
                 </div>
             </div>
         </section>
 
-        <h2 class="textoVerde">Contacto</h2>
-        <form action="https://formspree.io/f/mblovyly" method="POST">
-            <div>            
-                <label class="textoVerde"> 
-                    Tu mail:
-                    <input type="email" name="email" required>
-                </label>
-            </div>
-            <div>
-                <label class="textoVerde">
-                    Tu mensaje:
-                    <textarea name="message"></textarea>
-                </label>
-            </div>
-        <!-- your other form fields go here -->
-            <button type="submit">Enviar</button>
-        </form>
+        <!-- ================== SECCIÓN PRODUCTOS ===================== -->
+        <section id="productos" class="seccionProductos">
+            <h2>Productos</h2>
+            <label for="ordenar">Ordenar por:</label>
+            <select id="ordenar">
+                <option value="alfabetico">Alfabético (A-Z)</option>
+                <option value="precio-asc">Precio (menor a mayor)</option>
+                <option value="precio-desc">Precio (mayor a menor)</option>
+            </select> 
 
-        <!-- nombre apellido direccion email telefono 
-        <form action="" method="">        
-            <div>  
-                <label for="">Nombre</label>
-                <input type="text" name="nombre" required>
-            </div>
-                <label for="">Apellido</label>
-                <input type="text" name="apellido"required>
-            <div>
-                <label for="">Dirección</label>
-                <input type="text" name="direccion">
-            <div>
-                <label for="">Email</label>
-                <input type="text" name="email"required>
-            <div>
-                <label for="">Telefono</label>
-                <input type="text" name="telefono"required>          
-            </div>
+            <div id="contenedorProductos"></div>                
+        </section>
 
-        </form> -->  
+
+        <!-- ================ SECCIÓN CONTACTO ===================== -->
+        <section id="contacto" class="formularioContacto">
+            <h2>Contacto</h2>
+            <h3>Podés consultarnos por asesoramiento y ventas</h3>
+
+            <div class="contacto-grid">
+
+                <div class="info-contacto">
+                    <p><i class="fa-solid fa-phone"></i> <strong>Tel:</strong> 11 2345-6789</p>
+                    <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> vivero.mar@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> <strong>Dirección:</strong> Av. Santa Fe 3957, CABA</p>   
+                </div>
+
+                <form action="https://formspree.io/f/mblovyly" method="POST">
+                    <div class="campo">            
+                        <label> 
+                            NOMBRE
+                            <input type="text" name="nombre" required>
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <label>
+                            TELEFONO (OPCIONAL)
+                            <input type="tel" name="telefono">
+                        </label>                     
+                    </div>  
+                    <div class="campo">      
+                        <label class="campo-unico">
+                            EMAIL
+                                <input type="email" name="email" required>
+                        </label> 
+                    </div>  
+                    <div class="campo">            
+                        <label>
+                            TU MENSAJE
+                                <textarea name="message" rows="4" required></textarea>
+                        </label> 
+                    </div>               
+                
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>   
+        </section>            
+            
+         <!-- ==================== SECCIÓN MAPA ==================== -->
+        <section id="mapa">
+            <!-- Google map-->
+            <h2 id="h2Visitanos">Visitanos</h2>
+            <div class="mapa-container">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6569.667456759237!2d-58.422554324047326!3d-34.58307350918238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb581fe35595f%3A0x87f43eb5f95f6c8!2sAv.%20Sta.%20Fe%203957%2C%20C1425BHO%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1751761076964!5m2!1ses!2sar" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                >
+            </iframe>
+            </div>
+        </section>
+
+        <!-- ============== SECCIÓN RESEÑAS / TESTIMONIOS ============== -->
         
-        <!-- Google map-->
-        <h2 id="h2Visitanos" class="textoVerde">Visitanos</h2>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26281.488310833938!2d-58.41486299450681!3d-34.57415892125036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1748148031646!5m2!1ses!2sar" 
-            width="400" 
-            height="250" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
+        <section class="resenias">
+        <h2>Lo que dicen de nosotros..</h2>
+            <div class="contenedor-cards">               
+                <div class="card">
+                    <img src="imagenes/ana.jpg" alt="">
+                    <div class="card-content">
+                        <div>
+                            <span class="card-nombre">Ana G.</span><br>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><br>
+                            <span class="card-fecha">21/04/2025</span>
+                        </div>
+                        <p>"Excelente atención y plantas hermosas."</p>
+                    </div> 
+                </div>                   
+                <div class="card">
+                    <img src="imagenes/marcos.jpg" alt="">
+                    <div class="card-content">
+                        <div>
+                            <span class="card-nombre">Marcos L.</span><br>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><br>
+                            <span class="card-fecha">16/05/2025</span>
+                        </div>
+                        <p>"Compré suculentas para regalar y quedaron fascinados."</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="imagenes/carlos.jpg" alt=""><br>
+                    <div class="card-content">
+                        <div>
+                            <span class="card-nombre">Carlos A.</span><br>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><br>
+                            <span class="card-fecha">10/02/2025</span>
+                        </div>
+                        <p>"La variedad y calidad es espectacular."</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="imagenes/mujer.jpg" alt="">
+                    <div class="card-content">
+                        <div>
+                            <span class="card-nombre">Valeria S.</span><br>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><br>
+                            <span class="card-fecha">06/03/2025</span>
+                        </div>
+                        <p>"Me asesoraron muy bien y las plantas muy lindas."</p>
+                    </div>
+                </div>   
+            </div>          
+        </section> 
+        
 
-    </main>
+        <!-- ============== SECCIÓN FORMAS DE PAGO ============== -->
+        <section class="formas-pago-seccion">
+            <h2 class="titulo-seccion">Formas de pago</h2>
+            <div class="formas-pago-grid">
+                <div class="columna-pago">
+                    <h3>Pago electrónico</h3>
+                    <div class="iconos-linea">
+                        <img src="imagenes/modo.png" alt="Modo" class="icono-pago">
+                        <img src="imagenes/mercado.png" alt="Mercado Pago" class="icono-pago">
+                        <i class="fa-solid fa-money-bill-transfer icono-pago"></i>
+                        
+                    </div>
+                </div>
 
-    <footer>
-        <h3 class="textoVerde">Datos</h3>
-        <nav id="footerNav">    
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </nav>
+                <div class="columna-pago">
+                    <h3>Efectivo</h3>
+                    <div class="iconos-linea">
+                        <img src="imagenes/rapipago.png" alt="Rapipago" class="icono-pago">
+                        <img src="imagenes/pagofacil.png" alt="Pago Fácil" class="icono-pago">
+                    </div>
+                </div>
 
-        <h2>Seguinos en nuestras redes</h2>
-        <ul>
-            <li><i class="fa-brands fa-square-instagram"></i> Instagram</li>
-            <li><i class="fa-brands fa-tiktok"></i> Tiktok</li>
-            <li><i class="fa-brands fa-square-facebook"></i> Facebook</li>
-        </ul>
+                <div class="columna-pago">
+                    <h3>Tarjetas</h3>
+                    <div class="iconos-linea">
+                        <img src="imagenes/visa.png" alt="Visa" class="icono-pago">
+                        <img src="imagenes/mastercard.png" alt="Mastercard" class="icono-pago">
+                        <img src="imagenes/amex.png" alt="American Express" class="icono-pago">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+    </main>    
+    
+    <!-- ======================== BANNER  ======================== -->
+        <div class="banner">
+            <img src="imagenes/logoMar2.jpg" alt="Decoración" class="imgSobreBanner">
+            
+        </div>
+
+        
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer>        
+        <div class="footer-contenedor">
+        
+            <!-- Columna 1: Navegación -->
+            <div class="footer-columna">
+                <h3>NAVEGACION</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Contacto -->
+            <div class="footer-columna">
+                <h3>CONTACTANOS</h3>
+                <ul class="footer-contacto">
+                    <li><i class="fa-solid fa-phone"></i> 11 2345-6789</li>
+                    <li><i class="fa-solid fa-envelope"></i> vivero.mar@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. Santa Fe 3957, CABA</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes -->
+            <div class="footer-columna">
+                <h3>REDES SOCIALES</h3>
+                <div class="footer-redes">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+
+        </div>
     </footer>
-    <!-- copiar codigo de inserción para videos <a href="https://www.youtube.com/watch?v=4wxS1q279vY" target="_blank">Suculentas exóticas</a>
-    <a href="https://www.youtube.com/watch?v=iWCQE6m0HXo"></a>
-    <a href="https://www.youtube.com/watch?v=8PcctuXKABA"></a>
-    <a href="https://www.youtube.com/watch?v=ebCGVOlnM4Q"></a>
-    https://www.youtube.com/@joygardenstudio/videos-->
+
+    <!-- ======================== CARRITO DE COMPRAS / MODAL ======================== -->
+    <div id="modalCarrito" class="modal">
+            <div class="modal-contenido">
+                <span class="modal-cerrar">&times;</span>
+                <h2>CARRITO DE COMPRAS</h2>
+                <div class="modal-encabezado-columnas">
+                    <span class="col-producto">PRODUCTO</span>
+                    <span class="col-subtotal">SUBTOTAL</span>
+                </div>
+                <div id="contenidoCarrito"></div>
+                <div class="zona-vaciar">
+                <button id="vaciarCarrito" class="btn-vaciar">Vaciar carrito</button>
+                </div>
+                <div class="fila-total">
+                    <span class="label-total">Total a pagar</span>
+                    <span class="monto-total" id="totalCarrito">$0</span>
+                </div>
+                <p id="cuotasCarrito" class="cuotas-info">O hasta 3 cuotas sin interés de $0</p>
+                <div class="botones-final">
+                    <a href="#" id="verMasProductos" class="btn-ver-mas">VER MÁS PRODUCTOS</a>
+                    <button id="iniciarCompra" class="btn-comprar">INICIAR COMPRA</button>
+                </div>
+                
+                
+            </div>
+    </div>    
+<script src="script.js"></script>    
 </body>
+    
 </html>
