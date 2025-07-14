@@ -1,6 +1,15 @@
 /* ----------------------------- */
 /* Reset y fuentes */
 /* ----------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0%;
@@ -242,7 +251,7 @@ main img {
 /* ----------------------------- */
 #contenedorProductos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);;
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -258,11 +267,11 @@ main img {
 .card-producto {
   background-color: #f4f4f4;
   border-radius: 2px;
-  width: 100%;
+  
   padding: 5px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  min-height: 370px; 
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -270,6 +279,7 @@ main img {
 
 .card-producto img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;         
   object-fit: cover;     /* recorta sin deformar */
   border-radius: 2px;
@@ -314,12 +324,13 @@ main img {
 
 @media (max-width: 600px) {
   #contenedorProductos {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 480px) {
   #contenedorProductos {
-    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -422,6 +433,7 @@ main img {
   height: auto;
   border-radius: 2px;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -496,6 +508,23 @@ main img {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 600px) {
+  .contenedor-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .card {
+    width: 100%; /* o max-width: 100% */
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .contenedor-cards {
+    grid-template-columns: 1fr;
+  }
+}
 /* ----------------------------- */
 /* Formulario de contacto */
 /* ----------------------------- */
