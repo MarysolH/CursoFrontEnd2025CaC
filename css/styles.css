@@ -398,7 +398,7 @@ main img {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  margin-bottom: 5rem;
+  
 }
 
 .nosotrosTexto {
@@ -444,6 +444,17 @@ main img {
   .nosotrosTexto,
   .nosotrosImagen {
     order: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotrosImagen {
+    justify-content: center;
+  }
+
+  .nosotrosImagen img {
+    margin: 0 auto;
+    max-width: 90%; /* opcional para que no ocupe toda la pantalla */
   }
 }
 
@@ -714,7 +725,7 @@ html {
 .seccionServicios {
   max-width: 1200px;
   margin: 3rem auto;
-  padding: 3rem 0;
+  padding: 1rem 0;
   text-align: left;
 }
 
@@ -1407,4 +1418,73 @@ html {
   .menu-lateral {
     display: flex;
   }
+}
+
+.notificacion-carrito {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #3b8032;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10000;
+  font-size: 0.95rem;
+  transform: translateY(20px);
+}
+
+.notificacion-carrito.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.modal-confirmar {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido-confirmar {
+  background: white;
+  padding: 2rem;
+  border-radius: 6px;
+  text-align: center;
+  max-width: 300px;
+  width: 90%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.botones-confirmar {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.btn-confirmar,
+.btn-cancelar {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+
+.btn-confirmar {
+  background-color: #3b8032;
+  color: white;
+}
+
+.btn-cancelar {
+  background-color: #ccc;
+  color: #333;
 }
