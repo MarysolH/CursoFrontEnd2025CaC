@@ -277,14 +277,30 @@ btnConfirmarVaciar.addEventListener("click", () => {
 document.getElementById("iniciarCompra").addEventListener("click", () => {
   if (carrito.length === 0) {
     alert("Tu carrito está vacío.");
-  } else {
-    alert("Gracias por tu compra 😊");
+    return;
+  }
+
+    // Ocultar modal del carrito
+    modal.style.display = "none";
+
+    // Vaciar carrito
     carrito = [];
     guardarCarrito();
-    mostrarCarrito();
     actualizarContador();
-    modal.style.display = "none"; // Cierra el modal
-  }
+    mostrarCarrito();
+
+    // Mostrar mensaje
+    const mensaje = document.getElementById("mensajeCompra");
+    mensaje.classList.remove("oculto");
+    mensaje.classList.add("mostrar");
+
+    // Después de 3.5 segundos, redirigir al inicio
+    setTimeout(() => {
+      mensaje.classList.remove("mostrar");
+      mensaje.classList.add("oculto");
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 3500);
 });
 
 // =============================
