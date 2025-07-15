@@ -299,7 +299,7 @@ document.getElementById("iniciarCompra").addEventListener("click", () => {
       mensaje.classList.remove("mostrar");
       mensaje.classList.add("oculto");
 
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      
     }, 3500);
 });
 
